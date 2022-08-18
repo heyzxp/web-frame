@@ -5,6 +5,8 @@
     <hr>
     <component :is="true ? MyButton : 'h2'" >按钮</component>
     <component :is="false ? MyButton : 'h2'" >按钮</component>
+    <NuxtLayout name="default">
+    </NuxtLayout>
     <NuxtPage></NuxtPage>
   </div>
 </template>
