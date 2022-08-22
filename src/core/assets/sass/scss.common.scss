@@ -1,0 +1,213 @@
+//scss 中引入的class等
+
+//默认字体
+$fontFamily: PingFangSC-Regular, Arial, Microsoft YaHei;
+
+//统一规定字号
+$fontSize1: 12px; //小操作按钮及一些提示
+$fontSize2: 14px; //大部分字号（大篇幅用的字号，描述正文，列表）
+$fontSize3: 16px; //二级分类标题（如：服务概况中“部门服务排行”）
+$fontSize4: 18px; //突出的数字（如：异常监控中的数字）
+$fontSize5: 20px; //页面二级标题及弹窗标题（如：本人办理、他人办理）
+$fontSize6: 24px; //页面一级标题及一级分类、突出的数字（如：今日信息、我的督办、我的收藏及基本信息、所需材料等 我的待办条目数）
+$fontSize7: 30px; //页面主标题（如：中央财经大学网上办事大厅欢迎您）
+
+//统一规定各辅助色
+$auxiliary1: #ea4335; //辅助色1  异常、失败颜色及一些重要提示
+$auxiliary2: #34a853; //辅助色2  成功及完成颜色
+$fontColor1: #333333; //字体颜色1 页面标题、输入框输入后、事项名称等
+$fontColor2: #878787; //字体颜色2 次要信息（如：办理人、办理时间)
+$fontColor3: #bbbbbb; //字体颜色3 输入框内的提示
+$fontColor4: #ffffff; //字体颜色4 普遍字体颜色
+$borderColor1: #dbdbdb; //边框颜色1  单选、多选框、输入框（固定）
+$borderColor2: #eeeeee; //边框颜色2 分割线(固定）
+$backgroundColor: #F1F2F3; // body背景色
+
+//版心大小定义
+$contentWidth: 1200px;
+
+.elps,
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.ellipsis_2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.toCursor {
+  cursor: pointer;
+}
+
+// 超过指定宽度自动换行
+.overflow_width {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 版心
+.content_w {
+  width: $contentWidth;
+  margin: 0 auto;
+}
+
+// 分页公共样式
+.common_pagination.el-pagination {
+  .el-pagination__total {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .el-input__inner {
+    height: 30px;
+    line-height: 30px;
+
+    &:hover {
+      border-color: $mainColor;
+    }
+  }
+
+  .el-pagination__jump {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  button {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid $borderColor1;
+    border-radius: 4px;
+    margin: 0 7px;
+    line-height: 30px;
+
+    &:hover {
+      color: $mainColor;
+    }
+
+    &:disabled {
+      color: #C0C4CC !important;
+    }
+  }
+
+  .el-pager {
+    li {
+      height: 30px;
+      border: 1px solid $borderColor1;
+      margin: 0 7px;
+      border-radius: 4px;
+      line-height: 28px;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+
+    .number {
+      min-width: 30px;
+    }
+
+    .active {
+      border-color: $mainColor;
+      color: $mainColor;
+    }
+  }
+}
+
+// element dialog组件公共样式
+.dialog_common_style {
+  .el-dialog__header {
+    height: 64px;
+    padding: 17px 20px 10px;
+    border-bottom: 1px solid $borderColor2;
+    box-sizing: border-box;
+
+    .el-dialog__title {
+      color: $mainColor;
+    }
+
+    .el-dialog__close {
+      font-size: 22px;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 20px;
+    color: $fontColor1;
+  }
+
+  .el-dialog__footer {
+    padding: 16px;
+    border-top: 1px solid $borderColor2;
+    text-align: center;
+
+    button:first-child {
+      margin-right: 40px;
+    }
+  }
+}
+
+// 提示弹窗公共样式
+.common_tip_dialog {
+  .el-dialog__header {
+    padding: 13px;
+    background: $mainColor;
+  }
+
+  .el-dialog__title {
+    font-size: 16px !important;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .el-dialog__headerbtn {
+    top: 16px;
+  }
+
+  .el-dialog__close {
+    font-size: 18px !important;
+    color: #fff !important;
+  }
+
+  .el-dialog__body {
+    padding-top: 30px;
+
+    >div {
+      text-align: center;
+
+      .download_template {
+        font-size: 14px;
+        color: $mainColor;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .el-button {
+    padding: 9px 25px;
+  }
+
+  .el-button+.el-button {
+    margin-left: 25px;
+  }
+}
+
+// 中南智能助手样式
+.index_robot__3jJNy {
+  display: none;
+}
+
+.csu_site_index {
+  .index_robot__3jJNy {
+    display: block;
+  }
+}
+

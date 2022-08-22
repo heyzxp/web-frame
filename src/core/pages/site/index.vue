@@ -10,6 +10,6 @@ definePageMeta({
   title: '11111111111111',
   
   // someData
-  alias: [ '/index', '/home' ]
+  alias: [ '/index', '/home','/' ]
 })
 </script>

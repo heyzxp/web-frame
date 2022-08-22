@@ -1,0 +1,22 @@
+@charset "utf-8";
+// 默认变量定义
+
+// 全局颜色
+$mainColor: #204F9F; //主题色 按钮、选中、等大部分的颜色
+$mainColorT1: rgba(1,58,137,0.05); // 主题透明色1
+$mainBtnBackground: rgba(1,58,137,0.1); // 按钮背景色
+$mainChoseFormColor: rgba(32,79,159,0.2); // 选中的表单的背景色
+$mainHoverColor: #16428E; //鼠标滑过按钮时，显示的主题色
+$mainActiveColor: #0F3575;  //鼠标点击按钮时，显示的颜色
+$mainBackground: #26519B; // 移动端主题色
+
+
+// 登录页颜色
+$loginBgDeep: #1562bb; // 登录页背景渐变颜色深
+$loginBgLight: #4a8cd9; // 登录页背景渐变颜色浅
+$loginBtn: #4688d4; // 登录按钮颜色
+
+// 首页
+$logoWidth: auto; // 公共头部logo宽
+$logoHeight: 44px; // 公共头部logo高
+

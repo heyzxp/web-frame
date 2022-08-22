@@ -1,0 +1,744 @@
+@charset "utf-8";
+
+// 项目 公共css
+* {
+  font-family: $fontFamily;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: $fontColor1;
+  font-size: $fontSize2;
+}
+
+body {
+  text-align: left;
+  background-color: $backgroundColor;
+
+  input {
+    color: $fontColor1;
+  }
+}
+
+textarea:-ms-input-placeholder, input:-ms-input-placeholder {
+  color: $fontColor3;
+}/* Internet Explorer 10+ */
+
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+  color: $fontColor3;
+}/* WebKit browsers */
+
+textarea::-moz-placeholder, input::-moz-placeholder {
+  color: $fontColor3;
+}/* Mozilla Firefox 4 to 18 */
+
+textarea:-moz-placeholder, input:-moz-placeholder {
+  color: $fontColor3;
+}/* Mozilla Firefox 19+ */
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+ol ol,
+ul ul,
+ol ul,
+ul ol,
+dt {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $fontColor1;
+}
+
+input,
+select,
+button {
+  font-size: $fontSize1;
+}
+
+input,
+select,
+button,
+a,
+textarea {
+  outline: none !important;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+::-ms-clear,
+::-ms-reveal {
+  display: none;
+}
+
+//设置谷歌，打印四周边距为0
+@page {
+  margin: 20px;
+}
+
+//clear 公共class
+.clearfix::after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearboth {
+  clear: both;
+}
+
+.width_auto {
+  width: auto !important;
+}
+
+.redColor {
+  color: red !important;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.clearfloat {
+  float: none !important;
+}
+
+.overflowH {
+  overflow: hidden !important;
+}
+
+//局部v-loading状态
+.area-vloading {
+  background-color: transparent !important;
+}
+
+//数据管理
+#dataManage {
+  margin-bottom: 100px;
+  .container {
+    padding-bottom: 60px;
+  }
+  .dataManage_tit {
+    a {
+      color: #fff;
+      float: right;
+      background: $mainColor !important;
+      border-radius: 2px;
+      width: 100px;
+      height: 36px;
+      line-height: 36px;
+      border: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  .dataManage_list {
+    border-top: 1px solid #e6e6e6;
+    margin: 0 -10px;
+    padding: 0 10px;
+    li {
+      display: flex;
+      min-height: 64px;
+      padding-left: 60px;
+      align-items: center; // line-height: 64px;
+      font-size: 12px;
+      border-top: 1px solid #e6e6e6;
+      &:first-child {
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        font-weight: bold;
+        border-top: 0;
+      }
+      span {
+        flex: 2;
+        padding: 0 5px;
+        &:nth-child(2) {
+          flex: 3;
+          word-break: break-all;
+        }
+        &:last-child {
+          //margin-left: 150px;
+          flex: 3;
+          text-align: center;
+          a {
+            display: inline-block;
+            width: 68px;
+            height: 26px;
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(186, 186, 186, 1);
+            border-radius: 4px;
+            text-align: center;
+            line-height: 24px;
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  .pagination {
+    background: #fff;
+    float: right;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .dataManage_alert {
+    //display: none;
+    position: fixed;
+    padding-bottom: 10px;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 460px;
+    margin-top: -225px;
+    margin-left: -230px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    box-shadow: 0px 4px 15px 1px rgba(153, 153, 153, 0.4);
+    .alert_tit {
+      position: relative;
+      height: 50px;
+      background: $mainColor;
+      border-radius: 4px 4px 0px 0px;
+      text-align: center;
+      line-height: 44px;
+      font-size: 14px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 1);
+      img {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+    }
+    .alert_main {
+      //width: 100%;
+      padding: 35px 40px 0;
+      input {
+        width: 360px;
+        height: 40px;
+        padding-left: 10px;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(217, 217, 217, 1);
+        border-radius: 2px;
+      }
+      textarea {
+        resize: none;
+        width: 360px;
+        height: 200px;
+        padding: 5px;
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(217, 217, 217, 1);
+        border-radius: 2px;
+      }
+      div {
+        margin-top: 30px;
+        a:first-child {
+          float: left;
+          width: 120px;
+          height: 40px;
+          background: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(217, 217, 217, 1);
+          border-radius: 2px;
+          text-align: center;
+          line-height: 38px;
+        }
+        a:last-child {
+          float: right;
+          width: 120px;
+          height: 40px;
+          background: $mainColor;
+          border-radius: 2px;
+          text-align: center;
+          line-height: 40px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+.el-select {  
+  padding-bottom: 2px; 
+}
+
+// 流程图样式配置
+.ele_blue {
+  .djs-visual {
+
+    rect,
+    polygon,
+    circle,
+    path {
+      stroke: #4285F4 !important;
+    }
+  }
+}
+
+.ele_runing {
+  .djs-visual {
+
+    rect,
+    polygon,
+    circle,
+    path {
+      stroke: red !important;
+    }
+  }
+}
+
+//文字换行
+.wrap-word {
+  word-break: break-all !important;
+  white-space: normal !important;
+}
+
+// 禁用灰色
+.common_disabled_grey {
+  position: relative;
+  opacity: 0.5;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 单选按钮样式
+/*
+<label for="registerYes" class="common_ridio_style">
+  <input type="radio" id="registerYes" name="register" value="yes" v-model="register">
+  <div><span></span></div>
+  是
+</label>
+*/
+.common_ridio_style {
+  cursor: pointer;
+  >div {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #E5E5E5;
+    border-radius: 50%;
+    margin-right: 2px;
+    margin-top: -2px;
+    vertical-align: middle;
+    span {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: -4px; 
+      margin-left: -4px; 
+      background: $mainColor;
+    }
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked+div{
+    border-color: $mainColor;
+    span {
+      display: block;
+    }
+  }
+}
+
+//安卓统一返回按钮
+#android_retrun_btn {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  z-index: 1000;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #808080;
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+}
+
+// 催办 ----------------------------------------------
+.rightNowBoxShadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(102, 102, 102, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.rightNowBoxShadow .seeBox_p_2_span_ofl {
+  display: inline-block;
+  width: 162px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#rightNowBoxShadows {
+  overflow: visible;
+}
+
+.rightNowBox {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  background: #fff;
+  width: 300px;
+  min-height: 200px;
+  max-height: 500px;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.x-span {
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  position: absolute;
+  background: #A8A8A8;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  top: -16px;
+  right: -14px;
+}
+
+.rightNowBox>p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.rightNowBoxShadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(102, 102, 102, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.rightNowBoxShadow .seeBox_p_2_span_ofl {
+  display: inline-block;
+  width: 162px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rightNowBox>div {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.rightNowBox>div>span {
+  display: inline-block;
+  width: 50px;
+  cursor: pointer;
+  width: 60px;
+  height: 27px;
+  line-height: 27px;
+}
+
+.rightNowBox>div>.first-span {
+  color: #4285F4;
+  border: 1px solid rgba(66, 133, 244, 1);
+}
+
+.rightNowBox>div>.second-span {
+  background: rgba(66, 133, 244, 1);
+  color: #fff;
+}
+
+.do_one {
+  border: 1px solid #c0bcbc;
+  width: 200px;
+  height: 99px;
+  overflow-y: scroll;
+}
+
+.do_one_p {
+  text-align: left;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 30px;
+  margin-top: 5px;
+}
+
+.do_one_p_span {
+  position: absolute;
+  width: 14px;
+  display: inline-block;
+  height: 14px;
+  border: 1px solid rgb(102, 102, 102);
+  line-height: 12px;
+  cursor: pointer;
+  top: 1px;
+  right: 5px;
+}
+
+.do_one_img {
+  display: inline-block;
+  width: 13px;
+  position: absolute;
+  left: 0px;
+  cursor: pointer;
+}
+
+/** 进度条 */
+#progress_loading {
+  width: 100%;
+  height: 3px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+#progress_loading div {
+  width: 0px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #0bf23c;
+}
+
+//element ui 设置
+.el-scrollbar>.el-scrollbar__bar {
+  // opacity: 1 !important;
+}
+
+.el-select-dropdown {
+  z-index: 3000 !important;
+}
+
+/** 
+  element 主题色
+*/
+
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: $mainColor;
+  border-color: $mainColor;
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+  color: $mainColor;
+}
+
+.el-radio__inner:hover {
+  border-color: $mainColor;
+}
+
+.el-dialog__headerbtn:hover .el-dialog__close {
+  color: $mainColor;
+}
+
+.el-range-editor.is-active,
+.el-range-editor.is-active:hover {
+  border-color: $mainColor;
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: $mainColor;
+}
+
+.el-input__inner:focus {
+  border-color: $mainColor;
+}
+
+.el-message-box button.el-button--primary {
+  background-color: $mainColor !important;
+  border-color: $mainColor !important;
+  color: #fff !important;
+}
+
+// 复选框组件换成主题色
+.el-checkbox.is-bordered.is-checked {
+	border-color:$mainColor
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+	background-color:$mainColor;
+	border-color:$mainColor
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+	color:$mainColor
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+	border-color:$mainColor
+}
+
+.el-checkbox__inner:hover {
+	border-color:$mainColor
+}
+
+.el-checkbox-button__inner:hover {
+	color:$mainColor
+}
+
+.el-checkbox-button.is-checked .el-checkbox-button__inner {
+	background-color:$mainColor;
+	border-color:$mainColor;
+}
+.el-checkbox-button.is-checked:first-child .el-checkbox-button__inner {
+	border-left-color:$mainColor
+}
+
+.el-checkbox-button.is-focus .el-checkbox-button__inner {
+	border-color:$mainColor
+}
+
+.el-message {
+  z-index: 10000 !important;
+}
+
+//loading状态层级比导航低一级
+
+/* 
+  turn : 定义的动画名称
+  1s : 动画时间
+  linear : 动画以何种运行轨迹完成一个周期
+  infinite :规定动画应该无限次播放
+ */
+ @keyframes turn{
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotate(90deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  75%{-webkit-transform:rotate(270deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
+
+.el-loading-mask {
+  background-color: rgba(0,0,0,.2);
+
+  .el-loading-spinner i {
+    color: #409EFF;
+    font-size: 45px;
+    display: inline-block;
+    animation:turn 1s linear infinite; 
+  }
+}
+
+// 公共弹窗样式修改
+.dialogPop {
+  .el-dialog__header {
+    background: $mainColor;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    .el-dialog__title,.el-dialog__close {
+      color: white;
+    }
+  }
+  .el-checkbox {
+    .el-checkbox__input.is-checked+.el-checkbox__label {
+      color: $mainColor;
+    }
+    .is-checked {
+      .el-checkbox__inner {
+        background-color: $mainColor;
+        border-color:  $mainColor;
+      }
+    }
+  }
+  .el-dialog__footer {
+    text-align: center;
+    .dialog-footer {
+      .el-button--primary {
+        background-color: $mainColor;
+        border-color: $mainColor;
+      }
+      >button {
+        min-width: 90px;
+      }
+      button+button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// @import "pc.common.scss";
+// @import "mobile.common.scss";
+.el-button--primary {
+  background-color: $mainColor;
+  border-color: $mainColor;
+}

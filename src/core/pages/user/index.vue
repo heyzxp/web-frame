@@ -4,3 +4,6 @@
     <NuxtLink to="/user/addUser">/user/addUser Page</NuxtLink>
   </div>
 </template>
+<script>
+import './static/css/index.scss'
+</script>
