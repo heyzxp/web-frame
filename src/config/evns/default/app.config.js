@@ -25,4 +25,10 @@ module.exports = {
 	 * @type {String}
 	 */
   userKeyPrefix: '',
+
+	/**
+	 * 模块列表
+	 * @type {Array}
+	 */
+	 modules: ['site','user'],
 };
